@@ -5,6 +5,9 @@ import com.example.greetingappcrud.model.User;
 import com.example.greetingappcrud.repository.GreetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
 @Service
 public class GreetingService {
     @Autowired
@@ -23,9 +26,9 @@ public class GreetingService {
         greetingRepository.save(user1);
         return user1;
     }
-//    public String save(User user){
-//        User user1=new User();
-//        greetingRepository.save(user);
-//        return "hello" + user1;
-//    }
+
+    public Optional<User> getById(int id) {
+        return greetingRepository.findById(id);
+
+    }
 }

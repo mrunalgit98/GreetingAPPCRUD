@@ -15,7 +15,7 @@ public class User {
     String firstname;
     String lastname;
     public User(User user) {
-        this.id=id;
+        this.id=user.id;
         this.firstname=user.getFirstname() ;
         this.lastname=user.getLastname() ;
     }
